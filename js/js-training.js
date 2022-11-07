@@ -1,35 +1,18 @@
-// const hamburger = true;
-// const fries = false;
-
-// if(hamburger && fries) {
-//   console.log('Я сыт');
+// При помощи цикла выведите числа от 5 до 10 в консоль. 5 и 10 включительно. Цикл можно использовать любой
+// for (let i = 5; i <= 10; i++) {
+//   console.log(i);
 // }
 
-// console.log((hamburger && fries));
+// При помощи цикла for вывести числа от 20 до 10 в консоль. В обратном порядке (20, 19, 18...). Когда цикл дойдет до числа 13 - остановить весь цикл
+// for (let i = 20; i >= 10; i--) {
+//   console.log(i);
+//   if(i === 13) break;
+// }
 
-// В JS есть пять сущностей которые всегда false:
-
-// 1. null
-// 2. Undefined
-// 3. 0
-// 4. ''  - пустая строка
-// 5. NaN
-
-const hamburger = 3;
-const fries = 1;
-const cola = 0;
-
-console.log(hamburger === 3 && fries && cola);
-
-if (hamburger === 3 && fries === 1 && cola === 1) {
-  console.log('Мы сыты');
-} else {
-  console.log('Идем в другое место');
-}
-
-const StringUser = 'kbkbkbkjbkjb';
-const StringUser2 = 'zxczxczxxzccx';
-
-console.log(StringUser && StringUser2);
-
+// При помощи цикла for выведите чётные числа от 2 до 10 включительно
+// for (let i = 2; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//       console.log(i);
+//   }
+// }
 
