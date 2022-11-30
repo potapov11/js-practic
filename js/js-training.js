@@ -60,6 +60,17 @@ const namesObj = {
   c: 'Nikolai',
 };
 
-const newNamesObj = copyObj(namesObj);
+// console.log(namesObj);
+// const newNamesObj = copyObj(namesObj);
 
-console.log(namesObj);
+const add = {
+  d: 17,
+  i: 20,
+};
+
+// console.log(Object.assign(namesObj, add));
+// console.log(namesObj); 
+
+const newAdd = Object.assign({}, add);
+newAdd.d = 20;
+console.log(newAdd);
