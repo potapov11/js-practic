@@ -74,3 +74,34 @@ const add = {
 const newAdd = Object.assign({}, add);
 newAdd.d = 20;
 console.log(newAdd);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[0] = 'k';
+console.log(oldArray);
+console.log(newArray);
+
+const sites = ['vk', 'fc', 'inst'],
+      messengers = ['watsap', 'tg'],
+      internet = [...sites, ...messengers, 'yandex', 'mail'];
+console.log(internet);
+internet[3] = 'google';
+console.log(internet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+const num= [10, 20, 30];
+log(...num);
+
+const addNew = {
+  d: 17,
+  i: 20,
+};
+
+const NewaddNew = {...addNew};
+console.log(NewaddNew);
