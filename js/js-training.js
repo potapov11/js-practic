@@ -44,33 +44,60 @@ function showProgrammingLangs(plan) {
   return result;
 }
 
+function showProgrammingLangs(plan) {
+ 
+  const {programmingLangs} = plan.skills;
+  let str = '';
+
+  if (Object.keys(programmingLangs).length === 0) { //! Интересеное решение на проверку пустого объекта
+      return '';
+  } else {
+      for (let val in programmingLangs) {
+          str += `Язык ${val} изучен на ${programmingLangs[val]}\n`;
+      }
+  }
+
+  return str;
+}
+
 console.log(showProgrammingLangs(personalPlanPeter));
 
-// 1) Напишите функцию showExperience, которая будет принимать в себя объект со всеми данными и возвращать строку с опытом.
 
-// Пример:
 
-// showExperience(personalPlanPeter) => '1 month'
 
-// P.S. желательно использовать деструктуризацию, но не обязательно
+
+
+
+
+
+
+
+
+
+const car = {
+  type: 'taxi',
+  mark: 'ford',
+  colors: {
+    doors: 'green',
+    cartrunk: 'red'
+  }
+};
+
+function getColor(ourcar) {
+  let string = '';
+  const {colors} = car;
+  for (let a in colors) {
+    string+= `${a} в этой машине цвета ${colors[a]}\n`;
+  }
+  return string; 
+};
+
+console.log(getColor(car));
 
 // 2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
-
 // Пример:
-
 // showProgrammingLangs(personalPlanPeter)  =>
-
 // "Язык js изучен на 20% Язык php изучен на 10%"
-
 // Причем функция должна работать вне зависимости от количества языков. Если ни один не указан, то возвращается пустая строка.
-
 // P.S. Для переноса строки используется \n в конце строки.
 
-// 3) Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
-
-// Пример:
-
-// personalPlanPeter.showAgeAndLangs(personalPlanPeter)
-// => 'Мне 29 и я владею языками: RU ENG'
-
-// Заметьте, что возраст и языки подставляются автоматически из объекта, а языки всегда в верхнем регистре (большими буквами). Если данные в объекте поменяются, то и сообщение тоже изменится.
