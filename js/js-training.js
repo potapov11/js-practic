@@ -1,107 +1,52 @@
-const options = {
-  name: 'test',
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: 'balck',
-    background: 'red',
-  },
-  makeTest: function() {
-    console.log('Test');
+const personalPlanPeter = {
+  name: "Peter",
+  age: "29",
+  skills: {
+      languages: ['ru', 'eng'],
+      programmingLangs: {
+          js: '20%',
+          php: '10%'
+      },
+      exp: '1 month'   
   }
 };
 
-options.makeTest();
-
-
-// console.log(options.name )('Проверка через точку');
-// console.log(options['width']) ('Проверка через скобку');
-// console.log(options['colors']['border']);
-
-// function copy(mainObj) {
-//   let objCopy = {};
-
-//   let key;
-
-//   for (key in mainObj) {
-//     objCopy[key] = mainObj[key];
-//   }
-
-//   return objCopy;
-// };
-
-
-// const numbers = {
-//   a: 2,
-//   b: 3,
-//   c: {
-//     x: 7,
-//     y: 12,
-//   }
-// };
-
-// const newNumbers = copy(numbers);
-// console.log(newNumbers);
-
-function copyObj (mainObj) {
-  let newObj = {};
-
-  let key;
-
-  for(key in mainObj) {
-    newObj[key] = mainObj[key];
-  }
-  return newObj;
+function showExperience(plan) {
+  const {skills: {exp}} = plan; //! Пример синтаксиса деструктуризации объекта в обекте
+  return exp;
 }
 
-const namesObj = {
-  a: 'John',
-  b: 'Altun',
-  c: 'Nikolai',
-};
+console.log(showExperience(personalPlanPeter));
 
-// console.log(namesObj);
-// const newNamesObj = copyObj(namesObj);
+function showProgrammingLangs(plan) {
 
-const add = {
-  d: 17,
-  i: 20,
-};
-
-// console.log(Object.assign(namesObj, add));
-// console.log(namesObj); 
-
-const newAdd = Object.assign({}, add);
-newAdd.d = 20;
-console.log(newAdd);
-
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
-
-newArray[0] = 'k';
-console.log(oldArray);
-console.log(newArray);
-
-const sites = ['vk', 'fc', 'inst'],
-      messengers = ['watsap', 'tg'],
-      internet = [...sites, ...messengers, 'yandex', 'mail'];
-console.log(internet);
-internet[3] = 'google';
-console.log(internet);
-
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
 }
 
-const num= [10, 20, 30];
-log(...num);
+// 1) Напишите функцию showExperience, которая будет принимать в себя объект со всеми данными и возвращать строку с опытом.
 
-const addNew = {
-  d: 17,
-  i: 20,
-};
+// Пример:
 
-const NewaddNew = {...addNew};
-console.log(NewaddNew);
+// showExperience(personalPlanPeter) => '1 month'
+
+// P.S. желательно использовать деструктуризацию, но не обязательно
+
+// 2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
+
+// Пример:
+
+// showProgrammingLangs(personalPlanPeter)  =>
+
+// "Язык js изучен на 20% Язык php изучен на 10%"
+
+// Причем функция должна работать вне зависимости от количества языков. Если ни один не указан, то возвращается пустая строка.
+
+// P.S. Для переноса строки используется \n в конце строки.
+
+// 3) Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
+
+// Пример:
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter)
+// => 'Мне 29 и я владею языками: RU ENG'
+
+// Заметьте, что возраст и языки подставляются автоматически из объекта, а языки всегда в верхнем регистре (большими буквами). Если данные в объекте поменяются, то и сообщение тоже изменится.
