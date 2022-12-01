@@ -1,3 +1,24 @@
+// const personalPlanPeter = {
+//   name: "Peter",
+//   age: "29",
+//   skills: {
+//       languages: ['ru', 'eng'],
+//       programmingLangs: {
+//           js: '20%',
+//           php: '10%'
+//       },
+//       exp: '1 month'   
+//   }
+// };
+
+// function showExperience(plan) {
+//   const {skills: {exp}} = plan; //! Пример синтаксиса деструктуризации объекта в объекте
+//   return exp;
+// }
+
+// console.log(showExperience(personalPlanPeter));
+
+
 const personalPlanPeter = {
   name: "Peter",
   age: "29",
@@ -11,16 +32,19 @@ const personalPlanPeter = {
   }
 };
 
-function showExperience(plan) {
-  const {skills: {exp}} = plan; //! Пример синтаксиса деструктуризации объекта в обекте
-  return exp;
-}
-
-console.log(showExperience(personalPlanPeter));
-
 function showProgrammingLangs(plan) {
-
+  let result = "";
+  for (let lang in plan.skills.programmingLangs) { //! Изучить синтаксис этой функции!!!
+      if (lang === "") {
+          console.log("");
+      } else {
+          result += `Язык ${lang} изучен на ${plan.skills.programmingLangs[lang]}\n`;
+      }
+  }
+  return result;
 }
+
+console.log(showProgrammingLangs(personalPlanPeter));
 
 // 1) Напишите функцию showExperience, которая будет принимать в себя объект со всеми данными и возвращать строку с опытом.
 
