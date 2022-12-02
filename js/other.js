@@ -1,18 +1,46 @@
 const persons = {
-  first: 'john',
-  second: 'altyn',
-  third: {
-    dima: 'dima',
+  firstPerson: 'john',
+  secondPerson: 'altyn',
+  thirdPerson: {
+    name: 'Dima',
     ages: {
       a: 24,
       b: 25,
         width: {
-          wallone: 100,
-          walltwo: 200,
+          // wallone: 100,
+          // walltwo: 200,
         }
     }
   }
 };
+
+
+function showWallWidth(wall) {
+  let string = '';
+
+  const {width} = wall.thirdPerson.ages;
+  for (let key in width) {
+    if(Object.keys(width).length === 0) {
+      return `Объект пуст`;
+    } else {
+      string += `Длина ${key} равна ${width[key]}\n`;
+    }
+  }
+  return string;
+};
+
+console.log(showWallWidth(persons));
+
+
+
+
+
+
+
+
+
+
+
 
 let counter = 0;
 
@@ -31,4 +59,10 @@ for (let key in persons) {
 }
 
 
+// 2) Напишите функцию showWallWidth, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
+// Пример:
+// showProgrammingLangs(personalPlanPeter)  =>
+// "Длина стены 1 равна 100 Длина стены 2 равна 200"
+// Причем функция должна работать вне зависимости от количества языков. Если ни один не указан, то возвращается пустая строка.
+// P.S. Для переноса строки используется \n в конце строки.
 

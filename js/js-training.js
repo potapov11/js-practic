@@ -18,6 +18,17 @@
 
 // console.log(showExperience(personalPlanPeter));
 
+// function showProgrammingLangs(plan) {
+//   let result = "";
+//   for (let lang in plan.skills.programmingLangs) { //! Изучить синтаксис этой функции!!!
+//       if (lang === "") {
+//           console.log("");
+//       } else {
+//           result += `Язык ${lang} изучен на ${plan.skills.programmingLangs[lang]}\n`;
+//       }
+//   }
+//   return result;
+// }
 
 const personalPlanPeter = {
   name: "Peter",
@@ -25,24 +36,12 @@ const personalPlanPeter = {
   skills: {
       languages: ['ru', 'eng'],
       programmingLangs: {
-          js: '20%',
-          php: '10%'
+          // js: '20%',
+          // php: '10%'
       },
       exp: '1 month'   
   }
 };
-
-function showProgrammingLangs(plan) {
-  let result = "";
-  for (let lang in plan.skills.programmingLangs) { //! Изучить синтаксис этой функции!!!
-      if (lang === "") {
-          console.log("");
-      } else {
-          result += `Язык ${lang} изучен на ${plan.skills.programmingLangs[lang]}\n`;
-      }
-  }
-  return result;
-}
 
 function showProgrammingLangs(plan) {
  
@@ -50,7 +49,7 @@ function showProgrammingLangs(plan) {
   let str = '';
 
   if (Object.keys(programmingLangs).length === 0) { //! Интересеное решение на проверку пустого объекта
-      return '';
+      return 'hello';
   } else {
       for (let val in programmingLangs) {
           str += `Язык ${val} изучен на ${programmingLangs[val]}\n`;
@@ -100,4 +99,6 @@ console.log(getColor(car));
 // "Язык js изучен на 20% Язык php изучен на 10%"
 // Причем функция должна работать вне зависимости от количества языков. Если ни один не указан, то возвращается пустая строка.
 // P.S. Для переноса строки используется \n в конце строки.
+
+
 
