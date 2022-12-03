@@ -20,18 +20,31 @@ console.log(showFamily(family));
 
 
 
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//   const smallArr = [];
+  
+//   arr.forEach(element => {
+//     smallArr.push(element.toLowerCase());
+//   });
+
+//   return smallArr;
+// }
+// console.log(standardizeStrings(favoriteCities));
+
+
+//! Другое решение по вопросу с регистром
 const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 function standardizeStrings(arr) {
-  const lowerCase = [];
-  arr.forEach(function(item) {
-    lowerCase.push(item.toUpperCase());
-    // lowerCase.push(item.toUpperCase()); //! Метод для увеличения регистра 
-  });
-  return lowerCase;   //! Мое решение на задачу
+  for( let i in arr){
+    console.log(arr[i].toLowerCase());
+  }
 }
 
-console.log(standardizeStrings(favoriteCities));
+standardizeStrings(favoriteCities);
+
 
 
 
