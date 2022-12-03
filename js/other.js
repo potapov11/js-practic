@@ -1,7 +1,16 @@
-//!Пример работы метода forEach
+// const str = prompt('', '');
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
+// const products = str.split(', ');
 
-arr.forEach(function(item, i, arr) {
-  console.log(`Номер ${i} имеет значение ${item} и находится в массиве ${arr}`);
+// console.log(products);
+
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let value of arr) {
+  console.log(value + ' hello');
+};
+
+arr.forEach(function(item, i,) {
+  console.log(`Этот элемент имеет в себе индекс ${i} со значением ${item}`);
 });
