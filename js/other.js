@@ -1,61 +1,14 @@
-const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+const car = {
+  type: 'Taxi',
+  mark: 'Bmw',
+  height: 1.2,
+  color: 'red',
+};
 
-function showFamily(arr) {
-  let string = '';
-
-  if(arr.length > 0) {  //! Мое решение на задачу
-    arr.join(',');
-    string += `Семья состоит из: ${arr}`;
-    return string;
-    }  
-  }
-
-console.log(showFamily(family));
-
-// 1) Напишите функцию showFamily, которая будет принимать в себя массив 
-// строк и возвращать сообщение в нужном формате.
-// showFamily(family)  => 'Семья состоит из: Peter Ann Alex Linda'
-// Имена подставляются автоматически из массива. Если массив пустой, 
-// то выводится сообщение 'Семья пуста'
+//! Конструкция Object.create создает новый объект по прототипу уже существующего
 
 
+const otherCar = Object.create(car);
 
-// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
-
-// function standardizeStrings(arr) {
-//   const smallArr = [];
-  
-//   arr.forEach(element => {
-//     smallArr.push(element.toLowerCase());
-//   });
-
-//   return smallArr;
-// }
-// console.log(standardizeStrings(favoriteCities));
-
-
-//! Другое решение по вопросу с регистром
-const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
-
-function standardizeStrings(arr) {
-  for( let i in arr){
-    console.log(arr[i].toLowerCase());
-  }
-}
-
-standardizeStrings(favoriteCities);
-
-
-
-
-// 2) напишите функцию standardizeStrings, которая будет принимать в себя
-//  массив строк и будет выводить в консоль эти строки в нижнем регистре.
-// Пример:
-// standardizeStrings(favoriteCities)  выведет в консоль
-// lisbon
-// rome
-// milan
-// dublin
-// Это частая задача в реальности, так как от пользователя нам могут прийти
-//  ответы в самых разных форматах. В том числе и с разными буквами :)
-//   Поэтому нам нужно привести строки в один формат для правильной работы.
+console.log(otherCar.type);
+console.log(otherCar.mark);
