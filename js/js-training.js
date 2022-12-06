@@ -1,14 +1,34 @@
-let number = 5; debugger
+// let number = 5; debugger
 
-function getNumber() {
-  console.log(number); debugger
+// function getNumber() {
+//   console.log(number); debugger
+// }
+
+// number = 100;
+
+// getNumber(); debugger
+
+
+// number = 18;
+
+// getNumber(); debugger
+
+function createCounter() {
+  let counter = 0;
+
+  const myFunction = function() {
+    counter = counter + 1;
+    return counter;
+  };
+
+  return myFunction;  //! Ситуация когда одна функция
+  //! возвращает другую функцию
 }
 
-number = 100;
+const increment = createCounter();
 
-getNumber(); debugger
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
 
-
-number = 18;
-
-getNumber(); debugger
+console.log(c1, c2, c3);
