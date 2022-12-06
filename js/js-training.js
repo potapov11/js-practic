@@ -1,11 +1,14 @@
 let number = 5; debugger
 
 function getNumber() {
-
-  let number = 50; debugger
-  console.log(number);
+  console.log(number); debugger
 }
 
 number = 100;
+
+getNumber(); debugger
+
+
+number = 18;
 
 getNumber(); debugger
