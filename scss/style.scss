@@ -5,3 +5,9 @@
 .main-title {
     background-color: red;
 }
+
+.input-div {
+    &_title {
+        color: aqua;
+    }
+}
