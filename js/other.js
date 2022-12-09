@@ -46,7 +46,9 @@ console.log(obj.Петя);
 console.log(obj.Коля);
 
 // Задача. Создайте массив arr с элементами 1, 2, 3, 4, 5 двумя различными способами.
-//!1
+
+
+// !1
 // let arrNum = [];
 // for(let i = 1; i <= 5; i++) {
 // 	arrNum.push(i);
@@ -54,12 +56,42 @@ console.log(obj.Коля);
 
 // console.log(arrNum);
 
-//!2
-let arrNum = [];
-let counter = 0;
-while(counter != 5) {
-	counter++;
-	arrNum.push(counter);
-}
+// //!2
+// let arrNum = [];
+// let counter = 0;
+// while(counter != 5) {
+// 	counter++;
+// 	arrNum.push(counter);
+// }
 
-console.log(arrNum);
+// console.log(arrNum);
+
+// Задача. Дан многомерный массив arr:
+
+// var arr = {
+// 	'ru':['голубой', 'красный', 'зеленый'],
+// 	'en':['blue', 'red', 'green'],
+// };
+// // Выведите с его помощью слово 'голубой'.
+
+// console.log(arr.ru[0]);
+
+// Создайте массив arr = ['a', 'b', 'c']. Выведите его на экран с помощью функции alert.
+// const arr = ['a', 'b', 'c'];
+
+// function getArr(param) {
+// 	console.log(arr);
+// }
+
+// getArr(arr);
+
+// Создайте массив arr = ['a', 'b', 'c', 'd'] и с его помощью выведите на экран строку 'a+b, c+d'.
+
+const arr = [2, 5, 3, 9];
+
+//Умножьте первый элемент массива на второй, а третий элемент на четвертый. Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.
+
+const arrNewOne = arr[0] * arr[1];
+const arrNewTwo = arr[2] * arr[3];
+const result = arrNewOne + arrNewTwo;
+console.log(result);
