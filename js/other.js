@@ -91,7 +91,36 @@ const arr = [2, 5, 3, 9];
 
 //Умножьте первый элемент массива на второй, а третий элемент на четвертый. Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.
 
-const arrNewOne = arr[0] * arr[1];
-const arrNewTwo = arr[2] * arr[3];
-const result = arrNewOne + arrNewTwo;
-console.log(result);
+// const arrNewOne = arr[0] * arr[1];
+// const arrNewTwo = arr[2] * arr[3];
+// const result = arrNewOne + arrNewTwo;
+// console.log(result);
+
+
+//Создайте объект obj. Выведите на экран элемент с ключом 'c' двумя способами: через квадратные скобки и как свойство объекта:
+// var obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+// };
+
+// console.log(obj['c']);
+// console.log(obj.c);
+
+
+// Создайте массив заработных плат obj. Выведите на экран зарплату Пети и Коли.
+var obj = {
+    Коля: '1000', 
+    Вася: '500', 
+    Петя: '200'
+};
+
+function getSalary(newObj) {
+    for(let key in newObj) {
+        if(key === 'Коля' || key === 'Петя') {
+            console.log(newObj[key]);
+        }
+    }
+}
+
+console.log(getSalary(obj));
