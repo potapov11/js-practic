@@ -87,7 +87,7 @@ console.log(obj.Коля);
 
 // Создайте массив arr = ['a', 'b', 'c', 'd'] и с его помощью выведите на экран строку 'a+b, c+d'.
 
-const arr = [2, 5, 3, 9];
+// const arr = [2, 5, 3, 9];
 
 //Умножьте первый элемент массива на второй, а третий элемент на четвертый. Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.
 
@@ -108,19 +108,53 @@ const arr = [2, 5, 3, 9];
 // console.log(obj.c);
 
 
-// Создайте массив заработных плат obj. Выведите на экран зарплату Пети и Коли.
-var obj = {
-    Коля: '1000', 
-    Вася: '500', 
-    Петя: '200'
-};
+// Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}.
+//  Выведите с его помощью слово 'jQuery'
 
-function getSalary(newObj) {
-    for(let key in newObj) {
-        if(key === 'Коля' || key === 'Петя') {
-            console.log(newObj[key]);
-        }
-    }
+// const lang = {
+//     js:['jQuery', 'Angular'],
+//     php: 'hello', 
+//     css: 'world',
+// };
+
+// console.log(lang['js'][0]);
+
+// Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+
+
+//!Повторение
+//Деструктуризация массива
+
+let arr = ['Sergey', 'Potapov'];
+
+let [firstName, secondName] = arr;
+
+console.log(firstName);
+console.log(secondName);
+
+
+//Function expression vs function declaration
+
+// Function Declaration :
+function sayHi() {
+  alert( "Привет" );
 }
 
-console.log(getSalary(obj));
+
+// Function expression
+let sayHi = function() {
+    alert( "Привет" );
+  };
+
+
+let hi = +prompt('Сколько вам лет?', ''); 
+
+if(hi < 16) {
+    function welcome() {
+        console.log('Hello');}
+    welcome();    
+} else {
+    function welcome() {
+        console.log('good morning');}
+    welcome();    
+}
