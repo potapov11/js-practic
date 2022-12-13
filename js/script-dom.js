@@ -2,24 +2,28 @@
 'use strict';
 
 const box = document.getElementById('box'); 
-//!Получение элемента по Id
-console.log(box);
 
+const btns = document.getElementsByTagName('button');
 
-const btns = document.getElementsByTagName('button')[2];
-//!Получение нескольких элементов в виде псведомассива
-console.log(btns);
-
-//!Псевдомассив не подвержен изменениям, поэтому обращаться к элементам необходимо только через запись с индексом
-
-//!Получение элемента по классу
 const circles = document.getElementsByClassName('circle');
+console.log(circles);
 
-//!Метод querySelectorAll
-const hearts = document.querySelectorAll('.heart'); //Получение псевдомассива
-console.log(hearts);
+const hearts = document.querySelectorAll('.heart'); 
 
-hearts.forEach(function(item) { //Перебор псевдомассива с помощью forEach
-    console.log(item);
+const heart = document.querySelector('.heart');
+
+console.dir(box);
+
+
+
+box.style.backgroundColor = 'blue'; //! Запись стилей css в одну строку 
+box.style.width = '500px';
+
+box.style.cssText = 'background-color: blue; width: 500px'; //! Запись нескольких свойств стилей
+
+btns[1].style.borderRadius = '50%';
+
+circles.forEach(function(item) {
+	console.log(item);
+	// item.style.backgroundColor = 'gold';
 });
-
