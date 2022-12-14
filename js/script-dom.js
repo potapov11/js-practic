@@ -14,11 +14,14 @@
 // 	console.log(btns[item]);
 // });
 
-// const circles = document.getElementsByClassName('circle');
+const circles = document.getElementsByClassName('circle');
 // console.log(circles);
 
 
-// const heart = document.querySelector('.heart');
+const heart = document.querySelectorAll('.heart');
+console.log(heart);
+const heartOne = heart[0];
+const heartTwo = heart[1];
 
 // box.style.backgroundColor = 'blue'; //! Запись стилей css в одну строку 
 // box.style.width = '500px';
@@ -32,14 +35,26 @@
 // 	// item.style.backgroundColor = 'gold';
 // });
 
-
+const wrapper = document.querySelector('.wrapper');
+console.log(wrapper);
 const div = document.createElement('div'); //! Создаем элемент -1
 
 div.classList.add('black'); //! Присваиваем ему класс black -2
 
-document.body.append(div); //! Добавляем элемент в конец блока body
+// wrapper.prepend(div);
 
-document.querySelector('.wrapper').append(div);
+// document.body.append(div); //! Добавляем элемент в конец блока body
 
-document.querySelector('.wrapper').style.display = 'flex';
+wrapper.append(div);
 
+heartTwo.before(div);
+
+heartOne.after(div);
+
+heartOne.remove();
+
+// document.querySelector('.wrapper').style.display = 'flex';
+
+circles[1].replaceWith(heartTwo);
+
+div.innerHTML = '<h1>Hello World</h1>';
