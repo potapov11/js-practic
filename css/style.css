@@ -8,4 +8,12 @@
 
 .input-div_title {
   color: aqua;
+}
+
+.names__list {
+  list-style-type: none;
+}
+.names__list .name__item {
+  font-size: 24px;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */

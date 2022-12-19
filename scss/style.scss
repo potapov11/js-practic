@@ -11,3 +11,11 @@
         color: aqua;
     }
 }
+
+.names__list {
+  list-style-type: none;  
+		.name__item {
+			font-size: 24px;
+			margin-bottom: 5px;
+		}
+}
