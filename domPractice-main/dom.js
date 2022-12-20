@@ -76,10 +76,13 @@ pDiv.firstElementChild.remove();
 // которая принимает 3 аргумента: brand, color, year
 
 const generateAutoCard = (brand, color, year) => {
+    const curDate = new Date();
+    const curYear = curDate.getFullYear();
     return `
     <div class="autoCard">
-        <h2>BRAND YEAR</h2>
-        <p>Автомобиль BRAND - YEAR года. Возраст авто - YEARS лет.</p>
+        <h2>${brand.toUpperCase()} ${year}</h2>
+        <p>Автомобиль ${brand.toUpperCase()} - ${year} года. Возраст авто - YEARS лет.</p>
+        <p>Цвет: ${color}</p>
     </div>
     `;
 };
@@ -92,16 +95,26 @@ const generateAutoCard = (brand, color, year) => {
 
 // Создать новый DIV с классом autos
 
+const carsDiv = document.createElement('div');
+carsDiv.classList.add('autos');
+
 // Создать 3 карточки авто, используя функцию generateAutoCard
 const carsList = [
     {brand: 'Tesla', year: 2015, color: 'Красный'},
     {brand: 'Lexus', year: 2016, color: 'Серебристый'},
     {brand: 'Nissan', year: 2012, color: 'Черный'},
-]
+];
+
+const carsHTML = carsList.map(car => {
+    return generateAutoCard(car.brand, car.color, car.year);
+}).join('');
 
 // Поместить эти 3 карточки внутрь DIV с классом autos
+carsDiv.innerHTML = carsHTML;
+log(carsDiv);
 
 // Поместить DIV c классом autos на страницу DOM - до DIV с классом wrapper
+div.insertAdjacentElement("beforebegin", carsDiv);
 
 // Добавить кнопку Удалить на каждую карточку авто
 
