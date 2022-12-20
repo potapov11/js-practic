@@ -1,43 +1,88 @@
+const log = console.log;
 // Создать div
+const div = document.createElement("div");
 
 // Добавить к нему класс wrapper
+div.classList.add('wrapper');
 
 // Поместить его внутрь тэга body
+const body = document.querySelector('body');
+body.appendChild(div);
 
 // Создать заголовок H1 "DOM (Document Object Model)"
+const header = document.createElement('h1');
+header.textContent = "DOM (Document Object Model)";
 
 // Добавить H1 перед DIV с классом wrapper
+div.insertAdjacentElement("beforebegin", header);
+
 
 // Создать список <ul></ul>
 // Добавить в него 3 элемента с текстом "один, два, три"
-
+const ul = `
+    <ul>
+        <li>Один</li>
+        <li>Два</li>
+        <li>Три</li>
+    </ul>
+`;
 
 // Поместить список внутрь элемента с классом wrapper
+div.innerHTML = ul;
 
 // =================================================
 // Создать изображение
+const img = document.createElement('img');
 
 // Добавить следующие свойства к изображению
 // 1. Добавить атрибут source
+img.src = 'https://picsum.photos/240';
 
 // 2. Добавить атрибут width со значением 240
+img.width = 240;
 
 // 3. Добавить класс super
+img.classList.add('super');
 
 // 4. Добавить свойство alt со значением "Super Man"
+img.alt = 'Super Man';
 
 // Поместить изображение внутрь элемента с классом wrapper
+div.appendChild(img);
 
 // Используя HTML строку, создать DIV с классом 'pDiv' + c 2-мя параграфами
+const elemHTML = `
+    <div class = "pDiv">
+        <p>Параграф1</p>
+        <p>Параграф2</p>
+    </div>
+`;
+
 
 // Поместить этот DIV до элемента <ul></ul>
+const ulList = div.querySelector('ul');
+ulList.insertAdjacentHTML('beforebegin', elemHTML);
 
+//!------------------------------------------
 // Добавить для 2-го параграфа класс text
+const pDiv = document.querySelector('.pDiv');
+log(pDiv.children);
+pDiv.children[1].classList.add('text');
 
 // Удалить 1-й параграф
-
+pDiv.firstElementChild.remove();
+//!------------------------------------------
 // Создать функцию generateAutoCard, 
 // которая принимает 3 аргумента: brand, color, year
+
+const generateAutoCard = (brand, color, year) => {
+    return `
+    <div class="autoCard">
+        <h2>BRAND YEAR</h2>
+        <p>Автомобиль BRAND - YEAR года. Возраст авто - YEARS лет.</p>
+    </div>
+    `;
+};
 
 // Функция должна возвращать разметку HTML:
 // <div class="autoCard">
