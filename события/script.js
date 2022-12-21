@@ -1,20 +1,17 @@
-
-const log = console.log;
-
-let student = {
-  name: "Семён",
-  age: 21,
-  skills: {
-      html: true,
-      css: true,
-      react: false,
-  },
+let skills = {
+  "4": "React",
+  "1": "HTML",
+  "2": "CSS",
+  "3": "JavaScript",
+  "5": "NodeJS",
 };
+     
+let mySkills = {};
 
-for (let key in student) {
-  if(typeof(student[key]) === 'object'){
-    for (let i in student[key]) {
-      console.log(student[key][i]); 
-    }
-  }   //! Вывод значений свойств во вложеннном объекте ("true", "true", "false")
+//! Клонировнаие объекта в другой объект путем перебора for in
+
+for (let key in skills) {
+  mySkills[key] = skills[key];
 }
+
+console.log(mySkills);
