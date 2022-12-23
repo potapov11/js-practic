@@ -1,18 +1,14 @@
-const btn = document.querySelector('button');
+//Вам даны длина и ширина 4-стороннего многоугольника. Многоугольник может быть либо прямоугольником, либо квадратом.
+// Если это квадрат, верните его площадь. Если это прямоугольник, верните его периметр.
 
-btn.addEventListener('mouseenter', function () {
-  console.log('Click');
-});
- 
+// Пример(Ввод1, Ввод2 --> Вывод):
 
-const deleteElement =  function() { //Функция которая удаляет кнопку
-  console.log('Click');
-};
-
-let i = 0;
-  i++;
-  if(i == 2) {
-  btn.removeEventListener('mouseenter', deleteElement);
+function getNum(num, num2) {
+  if(num === num2) {
+    return num * num2;
+  } else {
+    return num + num2;
   }
+}
 
-btn.removeEventListener('mouseenter', deleteElement);
+console.log(getNum(2,3));
