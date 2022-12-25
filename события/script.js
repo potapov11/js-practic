@@ -1,14 +1,23 @@
-//Вам даны длина и ширина 4-стороннего многоугольника. Многоугольник может быть либо прямоугольником, либо квадратом.
-// Если это квадрат, верните его площадь. Если это прямоугольник, верните его периметр.
+// В этом простом задании вам дается число, и вы должны сделать его отрицательным. Но, может быть, число уже отрицательное?
 
-// Пример(Ввод1, Ввод2 --> Вывод):
+// Примеры
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
 
-function getNum(num, num2) {
-  if(num === num2) {
-    return num * num2;
+function makeNegative(num) {
+  let result;
+  if(num > 0){
+    result = '-' + num;
+    return result;
   } else {
-    return num + num2;
+    result = num;
+    return result;
   }
 }
 
-console.log(getNum(2,3));
+console.log(makeNegative(1));
+console.log(makeNegative(-5));
+console.log(makeNegative(0));
+console.log(makeNegative(0.12));
