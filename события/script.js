@@ -1,43 +1,22 @@
-// В этом простом задании вам дается число, и вы должны сделать его отрицательным. Но, может быть, число уже отрицательное?
+// описание:
+// Вы пишете код для управления светофорами вашего города. Вам нужна функция для обработки каждого изменения с зеленого на желтый, на красный, а затем снова на зеленый.
 
-// Примеры
-// makeNegative(1);    // return -1
-// makeNegative(-5);   // return -5
-// makeNegative(0);    // return 0
-// makeNegative(0.12); // return -0.12
+// Завершите функцию, которая принимает строку в качестве аргумента, представляющего текущее состояние источника света, и возвращает строку, представляющую состояние, в которое должен перейти источник света.
 
-function makeNegative(num) {
-  let result;
-  if(num > 0){
-    result = '-' + num;
-    return result;
-  } else {
-    result = num;
-    return result;
+// Например, когда входной сигнал зеленый, выходной сигнал должен быть желтым.
+
+
+
+function getColor(color) {
+    if (color === 'green') {
+      return 'yellow';
+    } else if (color === 'yeelow') {
+      return 'red';
+    } else if (color === 'red') {
+      return 'green';
   }
 }
 
-console.log(makeNegative(1));
-console.log(makeNegative(-5));
-console.log(makeNegative(0));
-console.log(makeNegative(0.12));
-
-// В этом простом задании вам дается число, и вы должны сделать его отрицательным. Но, может быть, число уже отрицательное?
-
-// Примеры
-// makeNegative(1);    // return -1
-// makeNegative(-5);   // return -5
-// makeNegative(0);    // return 0
-// makeNegative(0.12); // return -0.12
-
-function makeNegative(num) {
-  if (num > 0) {
-    return -num;
-  } else {
-    return num;
-  }
-}
-  console.log(makeNegative(1));
-  console.log(makeNegative(-5));
-  console.log(makeNegative(0));
-  console.log(makeNegative(0.12));
+console.log(getColor("green"));
+console.log(getColor("yellow"));
+console.log(getColor("red"));
