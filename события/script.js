@@ -3,10 +3,10 @@
 
 function boolToWord(bool){
   if(bool === true) {
-    return 'true';
+    return 'yes';
   } else {
-    return 'false';
+    return 'no';
   }
 }
 
-console.log(boolToWord(true));
+console.log(boolToWord(false));
